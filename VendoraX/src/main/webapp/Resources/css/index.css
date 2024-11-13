@@ -1,0 +1,635 @@
+@charset "UTF-8";
+   body {
+            font-family: 'Roboto', sans-serif;
+        }
+
+
+
+        .smooth-scroll {
+            scroll-behavior: smooth;
+        }
+
+        .sticky-footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background: #f8f9fa;
+            padding: 10px;
+        }
+
+        /* Logo container to manage spacing */
+        /* Header Styling */
+        .header {
+            background: linear-gradient(135deg, #8EC5FC, #E0C3FC);
+
+        }
+
+        /* Navbar Styling */
+        .navbar {
+
+            background: linear-gradient(135deg, #4a90e2, #50e3c2);
+            border-radius: 50px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+        }
+
+        .navbar-brand {
+            color: #ffffff;
+            /* Logo text color */
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* Modern logo styling */
+        .nav-logo {
+            border-radius: 50%;
+            padding: 3px;
+            border: solid #ff1e00;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Container for the animated text */
+        .company-name {
+            display: inline-block;
+            font-size: 2rem;
+            font-weight: bold;
+            color: white;
+            position: relative;
+            width: 150px;
+            font-style: italic;
+            overflow: hidden;
+        }
+
+        /* Keyframes for the snake-like movement */
+        @keyframes snakeMovement {
+            0% {
+                transform: translateX(0);
+                /* Start position */
+            }
+
+            25% {
+                transform: translateX(30px);
+                /* Move to the left */
+            }
+
+            50% {
+                transform: translateX(60px);
+                /* Move to the right */
+            }
+
+            75% {
+                transform: translateX(30px);
+                /* Move back to the left */
+            }
+
+            100% {
+                transform: translateX(0);
+                /* Return to start position */
+            }
+        }
+
+        /* Apply the animation */
+        .company-name {
+            animation: snakeMovement 2s ease-in-out infinite;
+            /* Adjust timing as needed */
+        }
+
+
+        /* Navbar Links */
+        .navbar-nav .nav-link {
+            color: #ffffff;
+            /* White text color */
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #b0c4de;
+            /* Light blue color on hover */
+        }
+
+        /* Dropdown Menu Styling */
+        .navbar-nav .dropdown-menu {
+            background: linear-gradient(135deg, #4a90e2, #50e3c2);
+            border: none;
+
+        }
+
+        .navbar-nav .dropdown-menu .dropdown-item {
+            color: #dcdcdc;
+            /* Light gray text color */
+        }
+
+        .navbar-nav .dropdown-menu .dropdown-item:hover {
+            background: linear-gradient(135deg, #337cd0, #1d8e76);
+
+            color: #ffffff;
+        }
+
+        /* Navbar Toggler Icon */
+        .navbar-toggler {
+            border: none;
+            outline: none;
+        }
+
+        .navbar-toggler .fas.fa-bars {
+            color: #ffffff;
+
+        }
+
+        /* Basic styling for the sidebar */
+        .offcanvas-sidebar {
+            position: fixed;
+            top: 70px;
+            left: 0;
+            width: 250px;
+            height: 100%;
+            background: linear-gradient(135deg, #337cd0, #1d8e76);
+            color: #fff;
+            transform: translateX(-100%);
+            transition: transform 0.3s ease;
+            /* Smooth transition for opening */
+            z-index: 1000;
+            /* Ensure it appears above other content */
+            overflow-y: auto;
+            /* Allow scrolling if the content overflows */
+        }
+
+        /* Visible state of the sidebar when active */
+        .offcanvas-sidebar.active {
+            transform: translateX(0);
+            /* Move sidebar into view */
+        }
+
+        /* Styling for sidebar content */
+        .sidebar-content {
+            padding: 1rem;
+            /* Padding inside the sidebar */
+        }
+
+        .btn-close-sidebar {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 1.5rem;
+            color:red;
+            border: none;
+            background: none;
+            cursor: pointer;
+        }
+
+
+        
+
+        
+
+        .navbar-dark .navbar-nav .nav-link {
+            color: #fff;
+            /* Navbar link color */
+        }
+
+        .navbar-dark .navbar-nav .nav-link:hover {
+            color: #f8f9fa;
+            /* Navbar link color on hover */
+        }
+
+        /* Adjustments for the navbar-toggler button */
+        .navbar-toggler {
+            border-color: transparent;
+            /* Remove border */
+        }
+
+        .navbar-toggler-icon {
+            background-image: none;
+            /* Remove default icon */
+        }
+
+
+
+        /* about company section styling start */
+
+        #about {
+            background: linear-gradient(135deg, #8EC5FC, #E0C3FC);
+            color: #333;
+        }
+
+        #about h2 {
+            font-size: 2.5rem;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        #about p {
+            color: #fff;
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .about-logo {
+            border-radius: 50%;
+            border: 8px solid #fff;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            /* Ensures the logo fits well within the circle */
+            transition: transform 0.5s ease-in-out;
+            animation: pulse 2s infinite;
+        }
+
+        /* Logo Animation */
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.1);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+
+
+
+        /* Rotating border animation */
+        @keyframes rotate {
+            0% {
+                transform: translate(-50%, -50%) rotate(0deg);
+            }
+
+            100% {
+                transform: translate(-50%, -50%) rotate(360deg);
+            }
+        }
+
+        /* About Text Styling */
+        .about-text {
+            color: black;
+            font-size: 1.1rem;
+            /* Slightly larger text for better readability */
+            line-height: 1.6;
+            /* Increase line height for better readability */
+            margin: 20px 0;
+            padding: 10px;
+
+            border-radius: 8px;
+            /* Rounded corners for a modern look */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            /* Subtle shadow for depth */
+            transition: color 0.3s ease, transform 0.3s ease;
+            /* Smooth transition for color and scaling */
+        }
+
+        /* Hover Effect */
+        .about-text:hover {
+            color: #E74C3C;
+            /* Change text color on hover */
+            transform: translateY(-5px);
+            /* Slight upward movement on hover */
+        }
+
+        /* Adding Animation */
+        @keyframes textAnimation {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .about-text {
+            animation: textAnimation 1s ease-out;
+            /* Apply animation */
+        }
+
+        .feature .icon {
+            color: #3498db;
+            /* Primary color - Blue */
+            transition: color 0.3s ease, transform 0.3s ease;
+            /* Smooth transition */
+        }
+
+        /* Hover Effects for Icons */
+        .feature:hover .icon {
+            color: #e74c3c;
+            transform: scale(1.2);
+
+        }
+
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .about-logo {
+                width: 100px;
+                height: 100px;
+            }
+
+            .about-logo-container::after {
+                width: 150px;
+                height: 150px;
+            }
+        }
+
+        /*about company section styling end  */
+        /* latest announcements styling start */
+        #announcements {
+            background: linear-gradient(135deg, #e7c964, #fda085);
+            padding: 40px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        #announcements h2 {
+            color: #fff;
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 50px;
+        }
+
+        .announcement-card {
+            background: #fff;
+            border: none;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+            transition: transform 0.5s ease;
+            width: 500px;
+            margin: 0 10px;
+
+        }
+
+        /* Card Hover Effect */
+        .announcement-card:hover {
+            transform: scale(1.5);
+            /* Slight zoom effect on hover */
+        }
+
+        /* Carousel Inner - Center Alignment */
+        .carousel-inner {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            overflow: hidden;
+            height: 300px;
+            /* position: relative; */
+
+        }
+
+        /* latest announcement s styling end */
+
+        /* services styling start */
+        /* Services Section Styling */
+        #services {
+            background: linear-gradient(135deg, #f0f4f8, #6ba1dd);
+            /* Soft gradient background */
+            padding: 60px 0;
+            /* Increased padding for better spacing */
+        }
+
+        #services h2 {
+            font-size: 2.8rem;
+            font-weight: bold;
+            color: white;
+            margin-bottom: 40px;
+        }
+
+        /* Card Styling */
+        .card {
+            border: none;
+            border-radius: 20px;
+            /* Rounded corners */
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            /* Deep shadow for modern effect */
+            overflow: hidden;
+            /* Ensure no overflow of content */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            /* Smooth transition effects */
+        }
+
+        .card-img-top {
+            width: 350px;
+            height: 200px;
+
+            border-bottom: 5px solid #fda085;
+            /* Bottom border on image for added style */
+        }
+
+        .card-body {
+            padding: 20px;
+            /* Add padding for content spacing */
+            text-align: center;
+            /* Center align text */
+        }
+
+        .card-title {
+            font-size: 1.8rem;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .card-text {
+            color: #666;
+            font-size: 1rem;
+        }
+
+        /* Card Hover Effect */
+        .card:hover {
+            transform: translateY(-10px);
+            /* Slight lift effect */
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            /* Enhanced shadow on hover */
+        }
+
+        .card-img-top {
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .card-img-top:hover {
+            transform: scale(1.1);
+        }
+
+        /* services styling end */
+        /* location styling  start */
+        /* Location Section Styling */
+        #location {
+            background-color: #343f49;
+            /* Light background color */
+            background: linear-gradient(135deg, #d5dde5, #93b2d6);
+            padding: 60px 0;
+            /* Increased padding for spacing */
+        }
+
+        #location h2 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color:white;
+            margin-bottom: 40px;
+        }
+
+        #location .col-md-6 {
+            margin-bottom: 20px;
+            /* Spacing between columns */
+        }
+
+        iframe {
+            border-radius: 15px;
+            /* Rounded corners for the map */
+        }
+
+        /* Location Section Styling End */
+        /* enquiry styling  start */
+        /* Enquiry Form Section Styling */
+        #enquiry {
+            background: linear-gradient(135deg, #e2e2e2, #cfadad);
+            padding: 60px 0;
+        }
+
+        #enquiry h2 {
+            font-size: 2.8rem;
+            font-weight: bold;
+            color: white;
+            margin-bottom: 40px;
+        }
+
+        #enquiryForm {
+            background: #ffffff;
+            /* White background for the form */
+            border-radius: 10px;
+            /* Rounded corners for the form */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            /* Soft shadow for modern effect */
+            padding: 30px;
+            max-width: 800px;
+            margin: 0 auto;
+            /* Center the form */
+        }
+
+        /* Form Input Styling */
+        .form-control {
+            border: 1px solid #d1d1d1;
+            /* Light gray border */
+            border-radius: 8px;
+            /* Rounded corners */
+            padding: 15px;
+            /* Increased padding for a better feel */
+            font-size: 1rem;
+            /* Adjust font size */
+            transition: border-color 0.3s ease;
+            /* Smooth transition for border color */
+        }
+
+        .form-control:focus {
+            border-color: #fda085;
+            /* Change border color on focus */
+            box-shadow: 0 0 5px rgba(250, 160, 133, 0.5);
+            /* Light shadow effect on focus */
+        }
+
+        /* Form Label Styling */
+        .form-label {
+            font-weight: bold;
+            color: #555;
+            /* Darker color for labels */
+            margin-bottom: 10px;
+        }
+
+        /* Button Styling */
+        .btn-primary {
+            background-color: #fda085;
+            /* Primary button color */
+            border-color: #fda085;
+            /* Border color */
+            padding: 10px 20px;
+            /* Padding for the button */
+            font-size: 1rem;
+            /* Font size for the button */
+            border-radius: 8px;
+            /* Rounded corners */
+            transition: background-color 0.3s ease, border-color 0.3s ease;
+            /* Smooth transition for hover effect */
+        }
+
+        .btn-primary:hover {
+            background-color: #f78f6d;
+            /* Darker shade for hover effect */
+            border-color: #f78f6d;
+            /* Border color on hover */
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            #enquiryForm {
+                padding: 20px;
+            }
+
+            .form-control {
+                font-size: 0.9rem;
+            }
+        }
+
+        /* enquiry styling  ends */
+        /* footer styling start */
+        /* Footer Styling */
+        footer {
+            background-color: #343a40;
+            /* Dark background */
+            color: #f8f9fa;
+            /* Light text color */
+        }
+
+        footer .nav-link {
+            color: #f8f9fa;
+            /* Light color for links */
+            margin: 0 10px;
+            /* Spacing between links */
+            font-size: 1rem;
+            /* Adjust font size */
+            transition: color 0.3s ease;
+            /* Smooth color transition */
+        }
+
+        footer .nav-link:hover {
+            color: #fda085;
+            /* Color change on hover */
+        }
+
+        footer .nav-item i {
+            font-size: 1.2rem;
+            /* Adjust icon size */
+            transition: color 0.3s ease;
+            /* Smooth color transition for icons */
+        }
+
+        footer .nav-item i:hover {
+            color: #fda085;
+            /* Icon color change on hover */
+        }
+
+        footer .text-light {
+            color: #f8f9fa;
+            /* Light color for footer text */
+        }
+
+        footer a.text-light {
+            text-decoration: none;
+            /* Remove underline from links */
+        }
+
+        footer a.text-light:hover {
+            text-decoration: underline;
+        }
+
+        footer .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }

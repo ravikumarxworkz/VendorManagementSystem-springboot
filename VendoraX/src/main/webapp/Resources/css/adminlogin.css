@@ -1,0 +1,129 @@
+@charset "UTF-8";
+body {
+	font-family: 'Roboto', sans-serif;
+	background-color: #f0f4f8; /* Slightly lighter blue-grey for a clean look */
+	margin: 0;
+	padding: 0;
+}
+
+.centered {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background-color: #f0f4f8; /* Matches the body background */
+}
+
+.custom-form {
+	background: linear-gradient(135deg, #dfe6ee, #5b667a); /* Softer gradient for better contrast */
+	border-radius: 15px;
+	padding: 40px;
+	width: 420px;
+	text-align: center;
+	box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2); /* Stronger shadow for more depth */
+	position: relative;
+}
+
+.custom-form input[type="text"], .custom-form input[type="password"],
+	.custom-form input[type="email"] {
+	width: 100%;
+	padding: 10px;
+	margin: 10px 0;
+	border-radius: 8px;
+	border: none;
+	background-color: #f1f3f5; 
+	box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.1);
+	font-size: 16px;
+}
+
+.logo {
+	max-width: 120px;
+	margin-bottom: 25px;
+	border-radius: 50%;
+}
+
+.custom-form h2 {
+	color: #4a667c; /* Stronger blue-grey for titles */
+	margin-bottom: 20px;
+	font-weight: 700;
+	font-size: 24px;
+}
+
+.btn-custom {
+	background-color: #6A82FB;
+	color: white;
+	border-radius: 50px;
+	transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-custom:hover {
+	background-color: #4e64d3;
+	transform: translateY(-3px); /* Adds subtle lift effect */
+}
+
+.custom-form #button {
+	width: 100%;
+	padding: 15px;
+	background-color: #5b667a; /* Matches the form gradient */
+	color: white;
+	border: none;
+	border-radius: 50px;
+	font-size: 16px;
+	cursor: pointer;
+	transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.custom-form #button:hover {
+	background-color: #4a536b;
+	transform: translateY(-3px);
+}
+
+.custom-form #button:active {
+	transform: scale(0.98);
+}
+
+.btn-home {
+	background-color: #28a720;
+	color: white;
+	margin-bottom: 20px;
+	width: 50%;
+	border-radius: 50px;
+	font-size: 16px;
+}
+
+.btn-home i {
+	margin-right: 8px;
+}
+
+.btn-home i:hover {
+	margin-right: 8px;
+	color:black;
+}
+
+.btn-home:hover {
+	background-color: #218838;
+	transform: translateY(-3px);
+}
+
+#otpSection, #newPasswordSection {
+	display: none;
+}
+
+#errorMessage, #emailError, #otpError, #errorPassword {
+	color: red;
+}
+
+#emailSuccess, #otpsucess {
+	color: green;
+}
+
+/* Extra styling for FontAwesome icons */
+.fa-home {
+	color: white;
+}
+
+input:focus {
+	outline: none;
+	box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+	border: 1px solid rgba(81, 203, 238, 1);
+}

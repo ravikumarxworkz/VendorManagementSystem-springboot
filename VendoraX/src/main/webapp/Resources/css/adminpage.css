@@ -1,0 +1,701 @@
+@charset "UTF-8";
+body {
+	font-family: Arial, sans-serif;
+}
+
+.sidebar {
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 200px;
+	background-color: #1d1f21;
+	color: white;
+	padding-top: 20px;
+	overflow-y: auto;
+}
+
+.sidebar .nav-link {
+	color: white;
+	padding: 10px;
+	display: block;
+}
+
+.sidebar .nav-link.active {
+	background-color: #28a745;
+}
+
+.sidebar-header img {
+	width: 100px;
+	height: auto;
+	border-radius: 50%;
+}
+
+.content {
+	margin-left: 220px;
+	padding: 20px;
+	background-color: #f8f9fa; /* Light background color for content */
+	min-height: 100vh;
+}
+
+#orderTrackContiner {
+	top :0;
+	margin-left: 220px;
+	padding: 20px;
+	background-color: #f8f9fa; /* Light background color for content */
+	min-height: 100vh;
+}
+
+.card {
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.display-4 {
+	font-size: 2rem;
+	font-weight: bold;
+}
+
+.dropdown-toggle img {
+	margin-right: 10px;
+}
+
+.modern-dashboard .card {
+	border-radius: 10px;
+	margin-bottom: 20px;
+}
+
+.modern-dashboard .card-title {
+	font-size: 1.2rem;
+	font-weight: bold;
+}
+
+.modern-dashboard .display-4 {
+	font-size: 2.5rem;
+	color: #4a69bd;
+}
+
+/* Responsive */
+@media ( max-width : 767px) {
+	.sidebar {
+		position: relative;
+		width: 100%;
+	}
+	.content {
+		margin-left: 0;
+	}
+}
+
+/* Hide all sections by default */
+.section {
+	display: none;
+	margin-top: 20px;
+}
+
+/* Display active section */
+.section.active {
+	display: block;
+}
+
+/* Table styles */
+.table-responsive {
+	margin-top: 20px;
+}
+
+.table thead {
+	background-color: #28a745;
+	color: white;
+}
+
+.table th, .table td {
+	padding: 15px;
+	text-align: center;
+}
+
+.sidebar-header h3 {
+	color: #28a745;
+}
+
+/* Notification Badge */
+.dropdown-menu {
+	max-height: 200px;
+	overflow-y: auto;
+}
+
+.badge {
+	background-color: #f14668;
+}
+
+#profileContainer {
+	position: relative;
+	z-index: 1;
+}
+
+#notificationContainer {
+	position: relative;
+	z-index: 4;
+}
+
+.chart-container {
+	width: 100%;
+	height: 400px;
+	margin-top: 20px;
+}
+/* Custom styles for the User Details Modal */
+.custom-modal-content {
+	background-color: #f4f7f6;
+	border-radius: 15px;
+}
+
+.custom-card-header {
+	background-color: #3e4444;
+	color: #fff;
+	font-weight: 600;
+}
+
+.card-body {
+	padding: 1.5rem;
+}
+
+.custom-input {
+	background-color: #eef1f5;
+	border-radius: 8px;
+	border: none;
+	padding: 10px;
+	font-size: 16px;
+	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.custom-input:focus {
+	border: 2px solid #007bff;
+	box-shadow: none;
+}
+
+.big-image {
+	border: 5px solid #007bff;
+	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.custom-divider {
+	border: 0;
+	height: 2px;
+	background-image: linear-gradient(to right, #007bff, #00c4ff);
+}
+
+.btn-group button {
+	padding: 10px 20px;
+	border-radius: 5px;
+}
+
+#editBtn {
+	background-color: #007bff;
+	border: none;
+}
+
+#submitBtn {
+	background-color: #28a745;
+	border: none;
+}
+
+#cancelBtn {
+	background-color: #dc3545;
+	border: none;
+}
+
+/* Modal Header */
+.modal-header.bg-dark {
+	background-color: #2c3e50;
+	color: #fff;
+	border-bottom: none;
+}
+
+.modal-header .btn-close-white {
+	filter: invert(1);
+}
+
+/* Ensure the styles are unique to this modal */
+#userDetailsModal .modal-dialog {
+	max-width: 900px;
+}
+
+#userDetailsModal .modal-content {
+	border-radius: 20px;
+	overflow: hidden;
+}
+
+.hidden {
+	display: none;
+}
+/* Styles for Success Modal */
+#successModal .modal-content {
+	border-radius: 0.5rem;
+}
+
+#successModal .modal-header {
+	border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+#successModal .modal-footer {
+	border-top: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+#successModal .btn-close-white {
+	filter: invert(1);
+}
+
+#errorModal .modal-content {
+	border-radius: 0.5rem;
+}
+
+#errorModal .modal-header {
+	border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+#errorModal .modal-footer {
+	border-top: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+#errorModal .btn-close-white {
+	filter: invert(1);
+}
+
+#fileInput {
+	display: none; /* Hide the input element */
+}
+/* Table container */
+#AnnouncementDetailsTable {
+	margin-top: 20px;
+}
+
+/* Table styles */
+#AnnouncementDetailsTable {
+	width: 100%;
+	border-collapse: collapse;
+	border-radius: 0.5rem;
+	overflow: hidden;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Header styles */
+#AnnouncementDetailsTable thead {
+	background-color: #343a40; /* Dark background for header */
+}
+
+#AnnouncementDetailsTable thead th {
+	color: white;
+	text-align: left;
+	padding: 15px;
+}
+
+/* Row hover effect */
+#AnnouncementDetailsTable tbody tr {
+	transition: background-color 0.3s ease;
+}
+
+#AnnouncementDetailsTable tbody tr:hover {
+	background-color: #f1f1f1; /* Light gray on hover */
+}
+
+/* Cell styles */
+#AnnouncementDetailsTable tbody td {
+	padding: 15px;
+	border-bottom: 1px solid #dee2e6; /* Light gray border */
+}
+
+/* Action buttons styling */
+#AnnouncementDetailsTable tbody td:last-child {
+	display: flex;
+	justify-content: space-around;
+}
+
+/* Button styles */
+#AnnouncementDetailsTable button {
+	border: none;
+	padding: 8px 12px;
+	border-radius: 4px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+#AnnouncementDetailsTable button:hover {
+	background-color: #007bff; /* Bootstrap primary color on hover */
+	color: white; /* White text on hover */
+}
+
+/* Chat container layout */
+#chat-container {
+	display: flex;
+	height: 100vh;
+}
+
+#chat-list {
+	width: 25%;
+	background-color: #f0f0f0;
+	padding: 20px;
+	box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+	overflow-y: auto;
+}
+
+#chat-box {
+	width: 75%;
+	display: flex;
+	flex-direction: column;
+	background-color: #fff;
+	border-left: 1px solid #ddd;
+}
+
+#admin-profile {
+	display: flex;
+	align-items: center;
+	padding-bottom: 15px;
+	border-bottom: 1px solid #ddd;
+	margin-bottom: 15px;
+}
+
+#admin-profile img {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	margin-right: 15px;
+}
+
+#admin-profile h5 {
+	margin: 0;
+}
+
+#user-search {
+	width: 100%;
+	padding: 10px;
+	margin-bottom: 15px;
+	border: 1px solid #ccc;
+	border-radius: 25px;
+}
+
+#user-list {
+	overflow-y: auto;
+	max-height: calc(100vh - 200px); /* Keeps the user list scrollable */
+}
+
+/* User item styling */
+.user-item {
+	display: flex;
+	align-items: center;
+	padding: 10px;
+	margin-bottom: 10px;
+	background-color: #fff;
+	border-radius: 8px;
+	border-bottom: 1px solid #e0e0e0;
+	cursor: pointer;
+	transition: background-color 0.2s;
+}
+
+.user-item:hover {
+	background-color: #e0e0e0;
+}
+
+.user-item img {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	margin-right: 15px;
+}
+
+.user-item div {
+	font-size: 16px;
+	font-weight: 500;
+}
+
+.user-name {
+	font-weight: bold;
+	font-size: 16px; /* Name font size */
+}
+
+.user-last-message {
+	font-size: 12px; /* Smaller font size for the last message */
+	color: #666; /* Light gray color for the last message */
+	margin-top: 3px; /* Small margin between name and last message */
+}
+
+.chat-user-active {
+	background-color: #f0f8ff; /* Light blue background for active user */
+	border-left: 5px solid #007bff; /* Highlighted left border */
+}
+
+#chat-header {
+	display: flex;
+	align-items: center;
+	padding: 20px;
+	background-color: #f7f7f7;
+	border-bottom: 1px solid #ddd;
+}
+
+#chat-header img {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	margin-right: 15px;
+}
+
+#chat-header h4 {
+	margin: 0;
+}
+
+#chat-box-content {
+	flex-grow: 1;
+	padding: 20px;
+	overflow-y: auto;
+	background-color: #f9f9f9;
+}
+
+#chat-input {
+	display: flex;
+	padding: 15px;
+	border-top: 1px solid #ddd;
+	background-color: #f7f7f7;
+}
+
+#message-input {
+	flex-grow: 1;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 25px;
+	margin-right: 10px;
+}
+
+#chat-input button {
+	background-color: #007bff;
+	color: white;
+	border: none;
+	padding: 10px 20px;
+	border-radius: 25px;
+	cursor: pointer;
+	transition: background-color 0.2s;
+}
+
+#chat-input button:hover {
+	background-color: #0056b3;
+}
+
+.eachMessage {
+	display: flex;
+	padding: 10px;
+	margin: 10px 0;
+	border-radius: 30px;
+	max-width: 50%;
+	word-wrap: break-word;
+	font-size: 15px;
+	box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.message-content {
+	flex: 1; /* Allow this to grow and take available space */
+	margin-right: 10px; /* Adjust margin for space */
+}
+
+.message-time {
+	color: #6c757d; /* Muted color */
+	font-size: 12px; /* Small text */
+	align-self: flex-end; /* Align to the bottom */
+	margin-left: 10px; /* Space between message and time */
+}
+
+.admin-message {
+	background-color: #dcf8c6; /* Light green for user */
+	align-self: flex-end;
+	text-align: right;
+	align-self: flex-start;
+	margin-left: auto;
+}
+
+.user-message {
+	background-color: white;
+	align-self: flex-start;
+}
+
+.eachMessage .messageAvatar {
+	/* width: 50px; 
+	height: 50px; 
+	border-radius: 50%;  */
+	margin-right: 10px;
+	overflow: hidden; /* Space between avatar and message text */
+}
+
+.eachMessage .messageAvatar img {
+	width: 40px; /* Set width for the avatar */
+	height: 40px; /* Set height for the avatar */
+	border-radius: 50%; /* Make the avatar round */
+	/* 	width: 100%; 
+	height: 100%; */
+	/* object-fit: cover; */
+	/* Ensure image covers the avatar area, maintaining aspect ratio */
+}
+
+@media ( max-width : 768px) {
+	#AnnouncementDetailsTable thead {
+		display: none; /* Hide headers on small screens */
+	}
+	#AnnouncementDetailsTable tr {
+		display: block;
+		margin-bottom: 1rem; /* Space between rows */
+	}
+	#AnnouncementDetailsTable td {
+		display: flex;
+		justify-content: space-between;
+		padding: 10px;
+		border: none; /* Remove borders for smaller screens */
+		position: relative;
+	}
+	#AnnouncementDetailsTable td::before {
+		content: attr(data-label); /* Show label for each cell */
+		position: absolute;
+		left: 10px;
+		font-weight: bold;
+	}
+}
+/* order track-containee */
+/* .track-container {
+    position: relative;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.order-details {
+	border: 1px solid #ddd;
+	padding: 30px;
+	margin-bottom: 20px;
+	background-color: #ffffff;
+	
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	border-radius: 10px;
+}
+
+.order-details h3 {
+	color: #007bff;
+	margin-bottom: 20px;
+	font-size: 24px;
+}
+
+.order-details p {
+	font-size: 16px;
+	color: #333;
+}
+
+.order-tracking {
+	margin-top: 30px;
+}
+
+.tracking-line {
+	display: flex;
+	justify-content: space-between;
+	position: relative;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	border-top: 2px solid #ddd;
+	padding-top: 20px;
+}
+
+.status-item {
+	flex-grow: 1;
+	position: relative;
+	text-align: center;
+}
+
+.status-item i {
+	font-size: 30px;
+	margin-bottom: 10px;
+	color: #007bff;
+}
+
+.status-line {
+	height: 2px;
+	background-color: #007bff;
+	width: 100%;
+	position: absolute;
+	top: 20px;
+	z-index: 1;
+}
+
+.status-box {
+	display: inline-block;
+	padding: 10px 20px;
+	background-color: #ffffff;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	border-radius: 10px;
+	z-index: 2;
+	position: relative;
+}
+
+.status-box.completed {
+	background-color: #007bff;
+	color: #fff;
+}
+
+.status-item p {
+	 margin: 5px 0 0;
+	font-size: 14px;
+	font-weight: bold;
+} */
+.track-container {
+    position: relative;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.order-details {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #f0f8ff; /* Lighter background for modern feel */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+}
+
+.order-tracking {
+    margin-top: 30px;
+}
+
+.tracking-line {
+    position: relative;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.status-item {
+    text-align: center;
+    flex-grow: 1;
+    max-width: 150px; /* Ensure status boxes don't get too large */
+}
+
+.status-box {
+    position: relative;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow for status boxes */
+    margin-bottom: 20px;
+}
+
+.status-box.completed {
+    background-color: #e0f7fa; /* Light blue for completed steps */
+}
+
+.status-icon i {
+    font-size: 24px;
+    color: #007bff;
+}
+
+.status-line {
+    flex-grow: 1;
+    height: 2px;
+    background-color: #007bff; /* Blue connecting line */
+    margin-left: 10px;
+    margin-right: 10px;
+    position: relative;
+    top: -10px; /* Align line with status box */
+}
+
+.status-item p {
+    margin: 5px 0 0;
+    font-size: 14px;
+}
